@@ -23,7 +23,7 @@ interface ParserInterface
      * Parses sources into an abstract source tree.
      *
      * @param ReadableInterface $input
-     * @return mixed
+     * @return NodeInterface
      *
      * @throws ParserExceptionInterface
      * @throws RuntimeExceptionInterface
