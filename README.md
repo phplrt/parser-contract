@@ -2,43 +2,35 @@
     <a href="https://railt.org"><img src="https://avatars2.githubusercontent.com/u/49816277?s=128" width="128" alt="Phplrt" /></a>
 </p>
 
-## Lexer Contracts
+## Parser Contracts
 
 A set of interfaces for abstraction over lexers.
 
-## Lexer Interfaces
+## Parser Interfaces
 
 ```php
-namespace Phplrt\Contracts\Lexer;
+namespace Phplrt\Contracts\Parser;
 
-use Phplrt\Contracts\Source\ReadableInterface;
+use Phplrt\Contracts\Ast\NodeInterface;
 
-interface LexerInterface
+interface ParserInterface
 {
-    public function lex(ReadableInterface $source): iterable;
-}
-
-interface TokenInterface
-{
-    public function getType(): ?int;
-    public function getOffset(): int;
-    public function getValue(): string;
-    public function getBytes(): int;
+    public function parse(ReadableInterface $input): NodeInterface;
 }
 ```
 
-## Lexer Exceptions
+## Parser Exceptions
 
 ```php
-namespace Phplrt\Contracts\Lexer\Exception;
+namespace Phplrt\Contracts\Parser\Exception;
 
 use Phplrt\Contracts\Exception\SourceExceptionInterface;
 
-interface LexerExceptionInterface extends \Throwable
+interface ParserExceptionInterface extends \Throwable
 {
 }
 
-interface RuntimeExceptionInterface extends SourceExceptionInterface, LexerExceptionInterface
+interface RuntimeExceptionInterface extends SourceExceptionInterface, ParserExceptionInterface
 {
 }
 ```
