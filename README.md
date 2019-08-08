@@ -4,7 +4,7 @@
 
 ## Parser Contracts
 
-A set of interfaces for abstraction over lexers.
+A set of interfaces for abstraction over parsers.
 
 ## Parser Interfaces
 
