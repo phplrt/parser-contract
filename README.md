@@ -15,7 +15,7 @@ use Phplrt\Contracts\Ast\NodeInterface;
 
 interface ParserInterface
 {
-    public function parse(ReadableInterface $input): NodeInterface;
+    public function parse(ReadableInterface $input): iterable;
 }
 ```
 
@@ -24,6 +24,7 @@ interface ParserInterface
 ```php
 namespace Phplrt\Contracts\Parser\Exception;
 
+use Phplrt\Contracts\Lexer\TokenInterface;
 use Phplrt\Contracts\Exception\SourceExceptionInterface;
 
 interface ParserExceptionInterface extends \Throwable
@@ -32,5 +33,6 @@ interface ParserExceptionInterface extends \Throwable
 
 interface RuntimeExceptionInterface extends SourceExceptionInterface, ParserExceptionInterface
 {
+    public function getToken(): TokenInterface;
 }
 ```
