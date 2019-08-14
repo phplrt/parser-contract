@@ -23,10 +23,10 @@ interface ParserInterface
      * Parses sources into an abstract source tree.
      *
      * @param ReadableInterface $input
-     * @return NodeInterface
+     * @return NodeInterface|NodeInterface[]|iterable
      *
      * @throws ParserExceptionInterface
      * @throws RuntimeExceptionInterface
      */
-    public function parse(ReadableInterface $input): NodeInterface;
+    public function parse(ReadableInterface $input): iterable;
 }

@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace Phplrt\Contracts\Parser\Exception;
 
+use Phplrt\Contracts\Lexer\TokenInterface;
 use Phplrt\Contracts\Exception\SourceExceptionInterface;
 
 /**
@@ -16,4 +17,10 @@ use Phplrt\Contracts\Exception\SourceExceptionInterface;
  */
 interface RuntimeExceptionInterface extends SourceExceptionInterface, ParserExceptionInterface
 {
+    /**
+     * Returns a token object during which processing errors occurred.
+     *
+     * @return TokenInterface
+     */
+    public function getToken(): TokenInterface;
 }
