@@ -9,11 +9,9 @@ declare(strict_types=1);
 
 namespace Phplrt\Contracts\Parser\Exception;
 
-use Phplrt\Contracts\Exception\SourceExceptionInterface;
-
 /**
  * Throws when the error of the parsing of the source code happens.
  */
-interface RuntimeExceptionInterface extends SourceExceptionInterface, ParserExceptionInterface
+interface RuntimeExceptionInterface extends ParserExceptionInterface
 {
 }

@@ -14,5 +14,4 @@ namespace Phplrt\Contracts\Parser\Exception;
  */
 interface ParserExceptionInterface extends \Throwable
 {
-
 }
