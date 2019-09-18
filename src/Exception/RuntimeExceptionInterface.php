@@ -7,14 +7,11 @@
  */
 declare(strict_types=1);
 
-namespace Phplrt\Compiler\Ast\Def;
-
-use Phplrt\Compiler\Ast\Node;
+namespace Phplrt\Contracts\Parser\Exception;
 
 /**
- * Class Definition
- * @internal Compiler's grammar AST node class
+ * Throws when the error of the parsing of the source code happens.
  */
-abstract class Definition extends Node
+interface RuntimeExceptionInterface extends ParserExceptionInterface
 {
 }
