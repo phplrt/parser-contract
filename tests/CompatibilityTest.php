@@ -5,13 +5,11 @@ declare(strict_types=1);
 namespace Phplrt\Contracts\Parser\Tests;
 
 use Phplrt\Contracts\Parser\ParserInterface;
-use PHPUnit\Framework\Attributes\Group;
 
 /**
  * Note: Changing the behavior of these tests is allowed ONLY when updating
  *       a MAJOR version of the package.
  */
-#[Group('phplrt/parser-contracts')]
 class CompatibilityTest extends TestCase
 {
     public function testParserCompatibility(): void
@@ -23,6 +21,9 @@ class CompatibilityTest extends TestCase
         };
     }
 
+    /**
+     * @requires PHP 8.0
+     */
     public function testParserWithMixedCompatibility(): void
     {
         self::expectNotToPerformAssertions();
